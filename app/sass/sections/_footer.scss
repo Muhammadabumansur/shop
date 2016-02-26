@@ -1,0 +1,96 @@
+/* --------- footer --------- */
+
+
+.footer {
+	min-width: 1256px;
+	position: relative;
+	background-image: url(/images/footer.png);
+
+	.container {
+		padding-top: 35px;
+		overflow: visible;
+	}
+}
+
+.footer_content {
+	display: block;
+	@include clearfix;
+}
+
+.footer_logo{
+	margin-top: 36px;
+}
+/* --------- socials --------- */
+
+.footer_socials {
+	display: block;
+	float: right;
+}
+
+.footer_socials__item {
+	position: relative;
+	display: inline-block;
+	margin-right: 25px;
+	width: 44px;
+	height: 44px;
+	background-color: #fff;
+	cursor: pointer;
+	@include border-radius(50%);
+	
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+.footer_socials__link {
+	display: block;
+	position: absolute;
+}
+
+$socials-layout: horizontal;
+$socials-spacing: 70px;
+@import "social/*.png";
+
+$social: vk, fb, tw;
+
+@each $item in $social {
+	.footer_socials__link_#{$item} {
+		@include social-sprite($item);
+		$height : social-sprite-height($item);
+		$width : social-sprite-width($item);
+		width: $width;
+		height: $height;
+		top: 22 - $height/2;
+		left: 22 - $width/2;
+	}
+}
+/* --------- socials --------- */
+.footer_nav{
+	display: block;
+	float: right;
+	text-align: right;
+	width: 600px;
+	clear: both;
+	margin-top: 17px;
+	line-height: 2.5;
+}
+.footer_nav__item{
+	display: inline-block;
+}
+.footer_nav__link{
+	margin-left: 22px;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;	
+}
+
+.copyright{
+	text-align: center;
+	position: absolute;
+	bottom: -20px;
+	padding-top: 5px;
+	width: 100%;
+	border-top: 1px solid rgb(73, 73, 73);
+	color: #fff;
+	font-size: 12px;
+}

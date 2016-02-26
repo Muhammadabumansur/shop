@@ -1,0 +1,68 @@
+mixin nav(className, items, activeIndex)
+	nav(class=className)
+		.container
+			ul(class="#{className}__list")
+				each item, index in items
+					li(class="#{className}__item" + ((activeIndex == index) ? " #{className}__item-active" : ''))
+						a(href="#" class="#{className}__link")= item
+
+
+mixin breadcrumbs(items)
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				each item, ndx in items
+					li.breadcrumbs__item(class="#{ndx == items.length - 1 ? 'breadcrumbs__item_active' : ''}")
+						a(href="#").breadcrumbs__link= item
+
+mixin checkbox(titles)
+	each item in titles
+		li(class="checkbox__item")
+			input(type="checkbox" id=item).checkbox_input
+			label(for="#{item}").checkbox_label #{item}
+
+mixin colorChoose(colors)
+	ul.color__list
+		each item in colors
+			li.color__item
+				a(href="#" class="color__link #{item}")
+					span.color__text= item
+
+mixin products(products)
+	ul.products_list1
+		each item in products
+			li.products
+				.products__slideshow
+					.slideshow 
+						img(src="#{item.image}", alt="#{item.name}").big-photo 
+					ul.mini__list
+						each value, key in item.images
+							li.mini__item
+								a(href="#").slideshow_pic
+									img(src="#{value}", alt="#{value}").mini__img
+					.products__articul
+						span.art Артикул
+						span.art_number #{item.articul}
+				.products_center_content
+					.products__title #{item.name} 
+					.products__info #{item.info} 
+					.products__feature
+						ul.features__list
+							each value, key in item.feature	
+								li.features__item
+									.features_name #{key}
+									.features_value #{value}
+					.products__reiting
+						.reiting__stars
+							ul.stars
+								li.star_full
+								li.star_full
+								li.star_full
+								li.star_full
+								li.star_empty
+						.reiting__value #{item.ratio}
+				.products_right_content
+					.products__price #{item.price} Р
+					.products_nallichie #{item.nalichie}
+					button.products__buy В корзину
+

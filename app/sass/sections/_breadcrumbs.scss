@@ -1,0 +1,40 @@
+/* --------- breadcrumbs --------- */
+
+.breadcrumbs {
+	margin-bottom: 20px;
+}
+
+.breadcrumbs__item {
+	display: inline-block;
+
+	&:first-child {
+		&:before {
+			display: none;
+		}
+	}
+
+	&:before {
+		content: ">";
+		display: inline-block;
+		margin-right:4px;
+	}
+}
+
+.breadcrumbs__link {
+	text-decoration: none;
+	color: $color_dark;
+	font-size: 13px;	
+	font-family: $font_bold;
+}
+
+.breadcrumbs__item_active {
+	.breadcrumbs__link {
+		font-weight: bold;
+		text-decoration: underline;
+		color: $color_orange;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+
+}

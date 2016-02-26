@@ -1,0 +1,26 @@
+extends ../main
+
+block title
+    | Мобильные телефоны
+block nav
+    +nav("nav", ['Планшеты', 'Мобильные телефоны', 'Mp3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника'], 1)
+block navigation
+
+    +breadcrumbs(['Главная', "Каталог"])
+    h1.main_head_text Мобильные телефоны
+
+block content
+    include ../_information/_phones
+    +products(phones)	    	
+    .path_products
+        ul.path__list
+            li.path__item 
+                a(href="").path__link <
+            li.path__item 
+                a(href="").path__link.path__link-active 1
+            li.path__item 
+                a(href="").path__link 2
+            li.path__item 
+                a(href="").path__link 3
+            li.path__item 
+                a(href="").path__link >

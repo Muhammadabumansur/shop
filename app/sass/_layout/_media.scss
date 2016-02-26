@@ -1,0 +1,56 @@
+@mixin media($width) {
+	@media (max-width: $width) {
+		@content;
+	}
+}
+
+
+@mixin content {
+	@content
+}
+
+.test {
+	@include content {
+		.class {
+			color: red;
+		}
+	}
+}
+
+
+@mixin media($width) {
+	@media (max-width: $width) {
+		@content
+	}
+}
+
+.break {
+	@include media(765px) {
+		color: red;
+	}
+
+	@include media(320px) {
+		color: green;
+	}
+}
+
+.another {
+	@include media(1200px) {
+		width: 100%;
+	}
+}
+
+body {
+	background-color: #ccc;
+	@include media(992px) {
+		background: red;
+	}
+
+	@include media(768px) {
+		background: green;
+	}
+
+	@include media(480px) {
+		background: blue;
+	}
+}
