@@ -39,3 +39,14 @@
     font-style: normal;
     font-weight: normal;
 }
+
+/* font-family: "PTRoubleSerif"; */
+@font-face {
+  font-family: 'PTRoubleSerif';
+  src: url('../font/PTRoubleSerif.eot');
+  src: url('../font/PTRoubleSerif.eot?#iefix') format('embedded-opentype'),  
+        url('../font/PTRoubleSerif.woff') format('woff'), 
+        url('../font/PTRoubleSerif.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

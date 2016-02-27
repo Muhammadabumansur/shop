@@ -21,11 +21,11 @@
 			a(href="#").filters__title.active Бренды
 			ul.basic_inner
 				+checkbox(['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola'])
-				a(href="#").reset-filter Сбросить фильтр
+			a(href="#").reset-filter Сбросить фильтр
 		li.basic__item
 			a(href="#").filters__title.active Цена
 			ul.basic_inner
-				.price_range
+				li.price_range
 					div.price_range__box
 						span.price_range__text от
 						input(type="text" id="price_range1").price_range__input
@@ -40,4 +40,4 @@
 			a(href="#").filters__title.active Операционная система
 			ul.basic_inner
 				+checkbox(['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom'])
-				a(href="#").reset-filter Сбросить фильтр
+			a(href="#").reset-filter Сбросить фильтр

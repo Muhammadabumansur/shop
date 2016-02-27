@@ -21,10 +21,18 @@ mixin checkbox(titles)
 			input(type="checkbox" id=item).checkbox_input
 			label(for="#{item}").checkbox_label #{item}
 
+//- mixin checkbox(ids, titles)
+//- 	-var n = 0
+//- 	while n < ids.length
+//- 	li(class="checkbox__item")
+//- 		input(type="checkbox" id=ids[n]).checkbox_input
+//- 		label(for="#{ids[n]}").checkbox_label #{titles[n]}
+//- 	-n=n+1
+
 mixin colorChoose(colors)
-	ul.color__list
+	li.color__list
 		each item in colors
-			li.color__item
+			.color__item
 				a(href="#" class="color__link #{item}")
 					span.color__text= item
 
@@ -62,7 +70,8 @@ mixin products(products)
 								li.star_empty
 						.reiting__value #{item.ratio}
 				.products_right_content
-					.products__price #{item.price} Р
+					.products__price #{item.price}
+						span.rouble &nbsp;п
 					.products_nallichie #{item.nalichie}
 					button.products__buy В корзину
 

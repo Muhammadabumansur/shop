@@ -67,7 +67,7 @@ var moduleShop = (function () {
       e.preventDefault();
 
       var $this = $(this),
-          item = $this.siblings('.checkbox__item'),
+          item = $this.parent('.basic__item'),
           inputs = item.find('input:checkbox');
 
       $.each(inputs, function() {
