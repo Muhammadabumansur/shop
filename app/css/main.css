@@ -829,16 +829,16 @@ footer {
 .products_list0 .products_right_content {
   display: block;
   position: absolute;
-  top: 0;
+  top: 15px;
+  bottom: 15px;
   right: 25px;
   width: 153px;
-  height: 100%;
   border-left: 1px solid #dee1e4;
 }
 .products_list0 .products__price {
   display: block;
   position: absolute;
-  top: 25px;
+  top: 0;
   right: 0;
   text-align: center;
   padding: 0;
@@ -847,14 +847,14 @@ footer {
 .products_list0 .products_nallichie {
   display: block;
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   right: 0;
   margin-right: 0;
 }
 .products_list0 .products__buy {
   display: block;
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   right: 0;
 }
 
@@ -1171,7 +1171,7 @@ footer {
   font-size: 44px;
   border: 2px solid #ff6e35;
   border-radius: 50%;
-  line-height: 13px;
+  line-height: 16px;
   width: 19px;
   height: 19px;
   box-sizing: border-box;

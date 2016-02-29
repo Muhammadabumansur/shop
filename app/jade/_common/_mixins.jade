@@ -18,16 +18,8 @@ mixin breadcrumbs(items)
 mixin checkbox(titles)
 	each item in titles
 		li(class="checkbox__item")
-			input(type="checkbox" id=item).checkbox_input
+			input(type="checkbox" id=item.replace(/\s+/g, '')).checkbox_input
 			label(for="#{item}").checkbox_label #{item}
-
-//- mixin checkbox(ids, titles)
-//- 	-var n = 0
-//- 	while n < ids.length
-//- 	li(class="checkbox__item")
-//- 		input(type="checkbox" id=ids[n]).checkbox_input
-//- 		label(for="#{ids[n]}").checkbox_label #{titles[n]}
-//- 	-n=n+1
 
 mixin colorChoose(colors)
 	li.color__list

@@ -16,7 +16,7 @@ gulp.task('server', function () {
   browserSync({
     port: 9000,
     server: {
-      baseDir: 'app'
+      baseDir: 'dest'
     }
   });
 });
@@ -73,14 +73,6 @@ gulp.task('minify', function() {
     .pipe(gulp.dest('dest'))
 });
 
-// Минификация изображений
-// new Imagemin()
-//   .src('images/**/*.{gif,jpg,png,svg}')
-//   .dest('dest/images')
-//   .use(Imagemin.jpegtran({progressive: true}))
-//   .run(function (err, files) {
-//     console.log(files[0]);
-//   });
 
 // Минификация js
 gulp.task('compress', function() {
