@@ -3,7 +3,6 @@ var gulp = require("gulp"),
     plumber = require('gulp-plumber'),
     jade = require('gulp-jade'),
     compass = require('gulp-compass'),
-    Imagemin = require('imagemin'),
     htmlmin = require('gulp-htmlmin'),
     cssnano = require('gulp-cssnano'),
     uglify = require('gulp-uglify');
